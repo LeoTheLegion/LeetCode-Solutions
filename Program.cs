@@ -4,4 +4,4 @@ using LeetCode.Problems;
 Solution s = new Solution();
 
 
-Console.WriteLine(s.LongestCommonPrefix(["flower", "flow", "flight"]));
+Console.WriteLine(s.IsValid("(])"));
