@@ -1,4 +1,7 @@
-﻿public partial class Solution
+﻿
+namespace LeetCode.Problems;
+
+public partial class Solution
 {
     public bool IsValid(string s)
     {
