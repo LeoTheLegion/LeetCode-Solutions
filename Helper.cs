@@ -31,5 +31,17 @@ namespace LeetCode
                 list = list.next;
             }
         }
+
+        public static void PrintListOfLists(IList<IList<int>> list)
+        {
+            foreach (var l in list)
+            {
+                foreach (var i in l)
+                {
+                    Console.Write(i + " ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
