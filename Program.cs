@@ -10,6 +10,6 @@ ListNode l2 = Helper.CreateList(new int[] { 1, 3, 4 });
 
 //Helper.PrintList(s.MergeTwoLists(l1, l2));
 
-Helper.PrintListOfLists(s.ThreeSum(new int[] { 1, -1, -1, 0 }));
+//Helper.PrintListOfLists(s.ThreeSum(new int[] { 1, -1, -1, 0 }));
 
-//Console.WriteLine(s.MergeTwoLists(l1, l2));
+Console.WriteLine(s.ThreeSumClosest(new int[] { -1, 2, 1, -4 },1));
