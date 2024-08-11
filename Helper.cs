@@ -43,5 +43,13 @@ namespace LeetCode
                 Console.WriteLine();
             }
         }
+
+        public static void PrintList(IList<string> list)
+        {
+            foreach (var l in list)
+            {
+                Console.WriteLine(l);
+            }
+        }
     }
 }

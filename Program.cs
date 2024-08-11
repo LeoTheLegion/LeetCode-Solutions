@@ -12,4 +12,6 @@ ListNode l2 = Helper.CreateList(new int[] { 1, 3, 4 });
 
 //Helper.PrintListOfLists(s.ThreeSum(new int[] { 1, -1, -1, 0 }));
 
-Console.WriteLine(s.ThreeSumClosest(new int[] { -1, 2, 1, -4 },1));
+Helper.PrintList(s.LetterCombinations("23"));
+
+//Console.WriteLine(s.ThreeSumClosest(new int[] { -1, 2, 1, -4 },1));
