@@ -10,8 +10,8 @@ ListNode l2 = Helper.CreateList(new int[] { 1, 3, 4 });
 
 //Helper.PrintList(s.MergeTwoLists(l1, l2));
 
-//Helper.PrintListOfLists(s.ThreeSum(new int[] { 1, -1, -1, 0 }));
+Helper.PrintListOfLists(s.FourSum(new int[] { 1000000000, 1000000000, 1000000000, 1000000000 }, -294967296));
 
-Helper.PrintList(s.LetterCombinations("23"));
+//Helper.PrintList(s.LetterCombinations("23"));
 
 //Console.WriteLine(s.ThreeSumClosest(new int[] { -1, 2, 1, -4 },1));
