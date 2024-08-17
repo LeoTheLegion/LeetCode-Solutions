@@ -11,6 +11,9 @@ namespace LeetCode
     {
         public static ListNode CreateList(int[] values)
         {
+            if (values.Length == 0)
+                return null;
+
             ListNode head = new ListNode(values[0]);
             ListNode current = head;
 
