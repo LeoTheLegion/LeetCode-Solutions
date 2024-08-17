@@ -7,19 +7,9 @@ Solution s = new Solution();
 
 ListNode[] listNodes = new ListNode[3];
 
-ListNode l1 = Helper.CreateList(new int[] { 1, 4, 5 });
+ListNode l1 = Helper.CreateList(new int[] { 1, 2, 3, 4 });
 
-listNodes[0] = l1;
-
-ListNode l2 = Helper.CreateList(new int[] { 1, 3, 4 });
-
-listNodes[1] = l2;
-
-ListNode l3 = Helper.CreateList(new int[] { 2, 6 });
-
-listNodes[2] = l3;
-
-Helper.PrintList(s.MergeKLists(listNodes));
+Helper.PrintList(s.SwapPairs(l1));
 
 //Helper.PrintListOfLists(s.FourSum(new int[] { 1000000000, 1000000000, 1000000000, 1000000000 }, -294967296));
 
