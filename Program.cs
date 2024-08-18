@@ -7,9 +7,9 @@ Solution s = new Solution();
 
 ListNode[] listNodes = new ListNode[3];
 
-ListNode l1 = Helper.CreateList(new int[] { 1, 2, 3, 4 });
+ListNode l1 = Helper.CreateList(new int[] { 1, 2, 3, 4, 5 });
 
-Helper.PrintList(s.SwapPairs(l1));
+Helper.PrintList(s.ReverseKGroup(l1,2));
 
 //Helper.PrintListOfLists(s.FourSum(new int[] { 1000000000, 1000000000, 1000000000, 1000000000 }, -294967296));
 
