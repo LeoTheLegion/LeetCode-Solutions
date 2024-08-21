@@ -15,4 +15,4 @@ ListNode l1 = Helper.CreateList(new int[] { 1, 2, 3, 4, 5 });
 
 //Helper.PrintList(s.LetterCombinations("23"));
 
-Console.WriteLine(s.LongestValidParentheses("()(()((("));
+Console.WriteLine(s.SearchInsert(new int[] { 1, 3, 5, 6 },2));
