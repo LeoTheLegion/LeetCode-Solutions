@@ -54,5 +54,40 @@ namespace LeetCode
                 Console.WriteLine(l);
             }
         }
-    }
+
+        public static T[][] ConvertStringInto2DArray<T>(string s)
+        {
+            s = s.Replace("[[", "").Replace("]]", "").Replace("], [", "],[");
+
+            string[] rows = s.Split(new string[] { "],[" }, StringSplitOptions.None);
+
+            T[][] result = new T[rows.Length][];
+
+            for (int i = 0; i < rows.Length; i++)
+            {
+                string[] cols = rows[i].Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                result[i] = new T[cols.Length];
+
+                for (int j = 0; j < cols.Length; j++)
+                {
+                    result[i][j] = (T)Convert.ChangeType(cols[j], typeof(T));
+                }
+            }
+
+            return result;
+
+        }
+        public static void Print2DArray<T>(T[][] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    Console.Write(array[i][j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+    }    
 }
