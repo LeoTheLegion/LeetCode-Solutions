@@ -19,8 +19,10 @@ string board = "[[ 5 ,  3 ,  . ,  . ,  7 ,  . ,  . ,  . ,  . ], [ 6 ,  . ,  . , 
 
 char[][] b = Helper.ConvertStringInto2DArray<char>(board);
 
-Helper.Print2DArray(b);
+//Helper.Print2DArray(b);
 
-Console.WriteLine(s.IsValidSudoku(b));
+//Console.WriteLine(s.IsValidSudoku(b));
 
 //Console.WriteLine(s.SearchInsert(new int[] { 1, 3, 5, 6 },2));
+
+Console.WriteLine(s.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }));
