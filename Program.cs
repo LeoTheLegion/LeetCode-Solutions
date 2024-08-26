@@ -25,4 +25,4 @@ char[][] b = Helper.ConvertStringInto2DArray<char>(board);
 
 //Console.WriteLine(s.SearchInsert(new int[] { 1, 3, 5, 6 },2));
 
-Console.WriteLine(s.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }));
+Console.WriteLine(s.Multiply("123456789", "987654321"));

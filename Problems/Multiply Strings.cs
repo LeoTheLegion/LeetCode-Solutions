@@ -10,100 +10,52 @@ namespace LeetCode.Problems
     {
         public string Multiply(string num1, string num2)
         {
+            if (num1 == "0" || num2 == "0")
+                return "0";
 
-            int MyAtoi(string s)
+            if (num1.Length < num2.Length)
+                return Multiply(num2, num1);
+
+            //Do the multiplication
+
+            int product = 0;
+
+            for (int i = num2.Length - 1; 0 <= i; i--)
             {
-                short sign = 1;
+                int y = num2[i] - '0';
 
-                int sum = 0;
-                ushort j = 0;
+                int carry = 0;
 
-                bool readingNum = false;
+                int innerSum = 0;
 
-                for (int i = 0; i < s.Length; i++)
+                for (int j = num1.Length - 1; 0 <= j; j--)
                 {
-                    char c = s[i];
+                    int x = num1[j] - '0';
 
-                    int code = c;
+                    int k = x * y + carry;
+                    carry = k / 10;
+                    k = k % 10;
 
-                    if (code == 32 && !readingNum) // space
-                        continue;
-
-                    if (code == 45 && sign == 1)
-                    {// negative
-                        if (readingNum)
-                        {
-                            break;
-                        }
-                        sign = -1;
-                        readingNum = true;
-                        continue;
-                    }
-
-                    if (code == 43)
-                    {
-                        if (readingNum)
-                        {
-                            break;
-                        }
-                        sign = 1;
-                        readingNum = true;
-                        continue;
-                    }
-
-                    int c_num = code - 48;
-                    //return c_num;
-
-                    if (c_num < 0 || c_num > 9)// is number
-                        break;
-
-                    try
-                    {
-                        sum = checked(c_num + sum * 10);
-                    }
-                    catch (OverflowException ex)
-                    {
-                        sum = int.MaxValue;
-
-                        if (sign == -1)
-                        {
-                            sum += 1;
-                        }
-
-                        break;
-                    }
-
-                    readingNum = true;
-                    if (sum != 0)
-                    {
-                        j++;
-                    }
+                    innerSum += k * (int)Math.Pow(10, num1.Length - 1 - j);
                 }
 
-                return sum * sign;
+                innerSum += carry * (int)Math.Pow(10, num1.Length);
+
+                product += innerSum * (int)Math.Pow(10, num2.Length - 1 - i);
             }
 
-            string IntegertoString(int num)
+            //Convert the product to string
+
+            string result = "";
+
+            while (product > 0)
             {
-                if (num == 0)
-                {
-                    return "0";
-                }
-
-                string s = "";
-
-                while (num > 0)
-                {
-                    int digit = num % 10;
-                    char c = (char)(digit + 48);
-                    s = c + s;
-                    num /= 10;
-                }
-
-                return s;
+                char c = (char)(product % 10 + '0');
+                result = c + result;
+                product /= 10;
             }
 
-            return IntegertoString(MyAtoi(num1) * MyAtoi(num2));
+            return result;
         }
     }
 }
