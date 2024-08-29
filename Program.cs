@@ -9,7 +9,7 @@ ListNode[] listNodes = new ListNode[3];
 
 ListNode l1 = Helper.CreateList(new int[] { 1, 2 });
 
-Helper.PrintList(s.RotateRight(l1,1));
+//Helper.PrintList(s.RotateRight(l1,1));
 
 //Helper.PrintList(s.ReverseKGroup(l1,2));
 
@@ -28,3 +28,5 @@ char[][] b = Helper.ConvertStringInto2DArray<char>(board);
 //Console.WriteLine(s.SearchInsert(new int[] { 1, 3, 5, 6 },2));
 
 //Console.WriteLine(s.Multiply("123456789", "987654321"));
+
+Console.WriteLine(s.MySqrt(8));
