@@ -35,7 +35,7 @@ namespace LeetCode
             }
         }
 
-        public static void PrintListOfLists(IList<IList<int>> list)
+        public static void PrintListOfLists<T>(IList<IList<T>> list)
         {
             foreach (var l in list)
             {

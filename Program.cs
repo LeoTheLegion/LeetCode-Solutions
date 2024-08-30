@@ -29,4 +29,8 @@ char[][] b = Helper.ConvertStringInto2DArray<char>(board);
 
 //Console.WriteLine(s.Multiply("123456789", "987654321"));
 
-Console.WriteLine(s.MySqrt(8));
+//Console.WriteLine(s.MySqrt(8));
+
+Helper.PrintListOfLists<string>(s.GroupAnagrams(new string[] {
+    "cab","tin","pew","duh","may","ill","buy","bar","max","doc"
+}));
