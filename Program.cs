@@ -31,6 +31,14 @@ char[][] b = Helper.ConvertStringInto2DArray<char>(board);
 
 //Console.WriteLine(s.MySqrt(8));
 
-Helper.PrintListOfLists<string>(s.GroupAnagrams(new string[] {
-    "cab","tin","pew","duh","may","ill","buy","bar","max","doc"
-}));
+int[][] intervals = new int[][]
+{ 
+    //[[2,3],[5,5],[2,2],[3,4],[3,4]]
+    new int[] { 2, 3 },
+    new int[] { 5, 5 },
+    new int[] { 2, 2 },
+    new int[] { 3, 4 },
+    new int[] { 3, 4 }
+};
+
+Helper.PrintListOfLists(s.Merge(intervals));
