@@ -33,12 +33,14 @@ char[][] b = Helper.ConvertStringInto2DArray<char>(board);
 
 int[][] intervals = new int[][]
 { 
-    //[[2,3],[5,5],[2,2],[3,4],[3,4]]
-    new int[] { 2, 3 },
-    new int[] { 5, 5 },
-    new int[] { 2, 2 },
-    new int[] { 3, 4 },
-    new int[] { 3, 4 }
+    //[[6,10],[13,16],[19,19],[23,25],[34,39],[41,43],[49,51]]
+    new int[] { 6, 10 },
+    new int[] { 13, 16 },
+    new int[] { 19, 19 },
+    new int[] { 23, 25 },
+    new int[] { 34, 39 },
+    new int[] { 41, 43 },
+    new int[] { 49, 51 }
 };
 
-Helper.PrintListOfLists(s.Merge(intervals));
+Helper.PrintListOfLists(s.Insert(intervals,new int[] { 27, 27 }));
