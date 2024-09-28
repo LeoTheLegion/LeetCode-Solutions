@@ -11,8 +11,10 @@ ListNode l1 = Helper.CreateList(new int[] { 3, 5 });
 
 //Helper.PrintList(s.ReverseBetween(l1,1,2));
 
-Console.WriteLine(s.LongestCommonPrefix(
-    new int[] { 18, 23 },
-    new int[] { 20, 46 }
-    ));
+
+MyCircularDeque obj = new MyCircularDeque(4);
+bool param_1 = obj.InsertFront(4);
+bool param_3 = obj.InsertFront(5);
+bool param_2 = obj.DeleteLast();
+
 
