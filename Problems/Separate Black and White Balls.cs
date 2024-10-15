@@ -28,7 +28,7 @@ namespace LeetCode.Problems
                 //to the steps
                 else
                 {
-                    step += r - l;
+                    steps += r - l;
 
                     l++;
                     r--;
